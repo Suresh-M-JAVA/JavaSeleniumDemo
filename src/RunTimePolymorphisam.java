@@ -17,7 +17,7 @@ class Dog extends Animal{
 }
 
 public class RunTimePolymorphisam {
-// Method overriding
+// Method overriding - same name with same parameters, return types
 // when subclass overrides method of superclass
 // appropriate method execution determined at runtime based on actual object type	
 // animal1 instance referring cat object

@@ -16,6 +16,37 @@ class Teacher extends Member{
 	}
 }
 
+//data hiding, can't create object, like model
+//can access by object of subclass which extends abstract class
+//abstract methods must override by subclasses
+abstract class Computer{
+	void turnon() {
+		System.out.println("turnig on");
+	}
+	
+	abstract void turnoff();
+}
+
+class Dell extends Computer{
+
+	@Override
+	void turnoff() {
+		System.out.println("turning off Dell");
+		
+	}
+	
+}
+
+class HP extends Computer{
+
+	@Override
+	void turnoff() {
+		System.out.println("turning off HP");
+		
+	}
+	
+}
+
 public class AbstractDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -29,5 +60,15 @@ public class AbstractDemo {
 		m[2] = new Teacher();
 		for(Member m1:m)
 			m1.welcome();
+		
+		//computer abstract class
+		Dell dell = new Dell();
+		dell.turnon();
+		HP hp =new HP();
+		hp.turnon();
+		
+		dell.turnoff();
+		hp.turnoff();
+	
 	}
 }
